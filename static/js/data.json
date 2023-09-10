@@ -1,0 +1,14 @@
+{
+    "projectName": "Malkhana Management System",
+    "projectDescription": "inventory system",
+    "projectTechStack": "angular,html,css,Java,Hibernate",
+    "userName": "Aum Hadiyal",
+    "userEmail": "aghadiyal@yahoo.com",
+    "collegeName": "Parul University",
+    "state": "Gujarat",
+    "city": "Vadodara",
+    "imgurLinks": [
+        "https://i.imgur.com/53yJOPt.jpg",
+        "https://i.imgur.com/HH9H7cr.jpg"
+    ]
+}
