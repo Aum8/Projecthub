@@ -13,16 +13,80 @@ body {
 
 header {
     /* background-color: #0078d4; */
-    background: linear-gradient(to right, #FFA500 53%, #000000 50%);
+    background:  rgb(19, 16, 16);
     color: white;
     padding: 20px 0;
+    height:100px;
     text-align: center;
+    
 }
 
 header img {
-    border-radius: 10px 20px;
-    width: 25%;
+    border-radius: 10px 10px;
+    width: 20%;
+    border: 2px solid orange;
+    float:left;
+    margin-left:150px;
+    margin-right:80px
 }
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    margin-top: 20px;
+    margin-right:10px;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    font-size: 16px;
+}
+
+
+.search-container button[type="submit"] {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Styling for the account icon */
+.account-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: orange;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Styling for the account popup */
+.account-popup {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+
+
 
 h1 {
     font-size: 2.5rem;
@@ -30,22 +94,22 @@ h1 {
 
 
 .menu-bar {
-    background-color: black;
+    background-color: orange;
     overflow: hidden;
 }
 
 .menu-bar a {
     float: left;
     display: block;
-    color: orange;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 .menu-bar a:hover {
-    background-color: #FFA500;
-    color: white;
+    background-color:black;
+    color: orange;
     border: 3px solid black;
 }
 
@@ -69,7 +133,7 @@ h1 {
     padding: 10px;
     border: 3px solid black;
     width: 50%;
-    border-radius: 10px 20px;
+    border-radius: 10px 10px;
 }
 
 .welcome h1 {

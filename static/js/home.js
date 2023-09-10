@@ -39,6 +39,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    //sign in waala hai
+    // JavaScript to toggle the account popup
+    const accountIcon = document.getElementById('account-icon');
+    const accountPopup = document.getElementById('account-popup');
+
+    accountIcon.addEventListener('click', function () {
+        if (accountPopup.style.display === 'block') {
+            accountPopup.style.display = 'none';
+        } else {
+            accountPopup.style.display = 'block';
+        }
+    });
+
+
     function animatePoints() {
         points.forEach((point, index) => {
           setTimeout(() => {
