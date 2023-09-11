@@ -24,9 +24,13 @@ urlpatterns = [
     path('home/', views.home),
     path('add-projects/', views.addprojects),
     path('project/', views.project),
+    path('account/', views.account),
 
     path('save_form_data/', views.save_form_data,
          name='save_form_data'),    # Other URL patterns
+
+    path('save_account_data/', views.save_account_data,
+         name='save_account_data'),    # Other URL patterns
 
 
 
