@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/home.css">
 </head>
 <body>
+    <script src="/static/js/script.js"></script>
     <div class="container">
         <h2>Featured Projects</h2>
         <div id="search-form">
@@ -26,6 +27,19 @@
             <!-- Projects will be added dynamically with JavaScript -->
         </ul>
     </div>
-    <script src="/static/js/script.js"></script>
+
+    <!-- Project template (hidden by default) -->
+    <div id="project-template" style="display: none;">
+        <h3></h3>
+        <p>Description: </p>
+        <p>Tech Stack: </p>
+        <p>Created by: </p>
+        <p>Email: </p>
+        <p>College: </p>
+        <p>State: </p>
+        <p>City: </p>
+        <div class="image-container"></div>
+    </div>
+
 </body>
 </html>

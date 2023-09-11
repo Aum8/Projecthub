@@ -1,77 +1,58 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const searchButton = document.getElementById("search-button");
-    const projectList = document.getElementById("project-list");
-    const searchInput = document.getElementById("search-input");
-    const filterDropdown = document.getElementById("filter");
-    const description = document.getElementById('description');
-    const points = document.querySelectorAll('#pointList li');
+// Define the URL of the JSON file
+const jsonFileUrl = '/static/js/data.json';
 
-    
-    let projectsData; // Define a variable to store the fetched data
-
-    // Fetch data from the JSON file
-    fetch("projects.json")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
-            return response.json();
-        })
-        .then(data => {
-            projectsData = data; // Store the fetched data in the variable
-            populateProjects(data);
-        })
-        .catch(error => {
-            console.error("Error:", error);
-        });
-
-    function populateProjects(projects) {
-        projectList.innerHTML = "";
-        for (const project of projects) {
-            const listItem = document.createElement("li");
-            listItem.className = "project";
-            listItem.innerHTML = `
-                <h2>${project.title}</h2>
-                <p>${project.description}</p>
-                <p>Topic: ${project.topic} | Tech Stack: ${project.techStack} | University: ${project.university}</p>
-            `;
-            projectList.appendChild(listItem);
-        }
-    }
-
-    function animatePoints() {
-        points.forEach((point, index) => {
-          setTimeout(() => {
-            point.style.opacity = '1';
-            point.style.transform = 'translateY(0)';
-          }, index * 1000); // Adjust the delay (in milliseconds) as needed
-        });
+// Function to fetch the JSON data
+function fetchProjectData() {
+  fetch(jsonFileUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      // Check if the data is an object and not an array
+      if (typeof data === 'object') {
+        // Call a function to display the project data on the page
+        displayProjectData(data);
+      } else {
+        console.error('Invalid data format. Expected an object.');
       }
-      window.onload =animatePoints();
-
-    searchButton.addEventListener("click", function () {
-        const searchTerm = searchInput.value.toLowerCase();
-        const filter = filterDropdown.value;
-
-        let filteredProjects = projectsData; // Use the variable containing the data
-
-        // Filter based on selected filter criteria
-        if (filter !== "all") {
-            filteredProjects = projectsData.filter((project) => project[filter].toLowerCase().includes(searchTerm));
-        } else {
-            // If "All" is selected, show all projects that contain the search term in any field
-            filteredProjects = projectsData.filter((project) => {
-                for (const key in project) {
-                    if (project[key].toLowerCase().includes(searchTerm)) {
-                        return true;
-                    }
-                }
-                return false;
-            });
-        }
-
-        // Populate the filtered projects
-        populateProjects(filteredProjects);
+    })
+    .catch((error) => {
+      console.error('Error fetching data:', error);
     });
-});
+}
 
+// Function to display project data on the page
+function displayProjectData(data) {
+  const projectList = document.getElementById('project-list');
+  const projectTemplate = document.getElementById('project-template').cloneNode(true);
+
+  // Populate the project template with data
+  projectTemplate.style.display = 'block';
+  projectTemplate.querySelector('h3').textContent = data.projectName;
+  projectTemplate.querySelector('p:nth-child(2)').textContent += data.projectDescription;
+  projectTemplate.querySelector('p:nth-child(3)').textContent += data.projectTechStack;
+  projectTemplate.querySelector('p:nth-child(4)').textContent += data.userName;
+  projectTemplate.querySelector('p:nth-child(5)').textContent += data.userEmail;
+  projectTemplate.querySelector('p:nth-child(6)').textContent += data.collegeName;
+  projectTemplate.querySelector('p:nth-child(7)').textContent += data.state;
+  projectTemplate.querySelector('p:nth-child(8)').textContent += data.city;
+
+  // Create a container for the images
+  const imgContainer = projectTemplate.querySelector('.image-container');
+
+  // Create image elements for the Imgur links
+  data.imgurLinks.forEach((link) => {
+    const img = document.createElement('img');
+    img.setAttribute('src', link);
+
+    // Set maximum width and height for the images
+    img.style.maxWidth = '300px'; // You can adjust the value as needed
+    img.style.maxHeight = '200px'; // You can adjust the value as needed
+
+    imgContainer.appendChild(img);
+  });
+
+  // Add the populated project template to the project list
+  projectList.appendChild(projectTemplate);
+}
+
+// Call the fetchProjectData function when the page loads
+window.addEventListener('load', fetchProjectData);
