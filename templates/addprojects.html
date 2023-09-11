@@ -8,8 +8,88 @@
     <link rel="stylesheet" href="/static/css/addprojects.css">
     <script src="/static/js/addprojects.js"></script>
     <!-- Include any additional stylesheets or scripts you need -->
-</head>
+    <style>
+       /* AddProject form styles */
 
+    body{
+        background-color: orange;
+    }
+
+    .container {
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+input[type="text"],
+textarea,
+select {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    /* Imgur image upload styles */
+    #uploadedImages {
+        margin-top: 20px;
+    }
+
+    #uploadedImages h3 {
+        margin-top: 0;
+    }
+
+    #uploadedImages img {
+        max-height: 200px;
+        margin: 10px;
+    }
+
+    #uploadedImages a {
+        display: block;
+        text-align: center;
+        margin: 10px;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .ui {
+        align-items: center;
+        text-align: center;
+        display: flex;
+    }
+        </style>
+    </head>
+
+    <!--Html Code(Tere liye)-->
 <body>
     <div class="container">
         <h1>Add Project</h1>
@@ -26,7 +106,7 @@
             <input type="text" id="projectTechStack" name="projectTechStack" required>
 
             <div>
-                <h3>Upload Images to Imgur (WAIT FOR YOUR IMAGES TO DISPLAY HERE..!!!)</h3>
+                <h3>Upload Images(WAIT FOR YOUR IMAGES TO DISPLAY HERE..!!!)</h3>
                 <input type="file" id="fileInput" multiple>
             </div>
             <div id="uploadedImages"></div>
