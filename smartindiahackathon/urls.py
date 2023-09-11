@@ -23,6 +23,7 @@ urlpatterns = [
     path('', views.home),
     path('home/', views.home),
     path('add-projects/', views.addprojects),
+    path('project/', views.project),
 
     path('save_form_data/', views.save_form_data,
          name='save_form_data'),    # Other URL patterns

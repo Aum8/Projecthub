@@ -11,6 +11,9 @@ def aboutUs(request):
 def home(request):
     return render(request, "home.html")
 
+def project(request):
+    return render(request, "project.html")
+
 
 def addprojects(request):
     return render(request, "addprojects.html")
