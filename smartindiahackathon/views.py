@@ -29,54 +29,42 @@ def addprojects(request):
 def account(request):
     return render(request, "account.html")
 
-
+#C:\\Users\\Aum\\Downloads\\Projecthub\\Projecthub\\static\\js\\data.json
 def save_form_data(request):
     if request.method == 'POST':
         try:
             data = json.loads(request.body.decode('utf-8'))
             # You can now process and save 'data' to a JSON file
-            with open('D:/SIH/static/js/data.json', 'r') as file:
+            with open('C:\\Users\\Aum\\Downloads\\Projecthub\\Projecthub\\static\\js\\data.json', 'r') as file:
                 existing_data = json.load(file)
 
             # Append the new data to the existing data
             existing_data.append(data)
 
             # Write the updated data back to the file with a comma and newline
-            with open('D:/SIH/static/js/data.json', 'w') as file:
+            with open('C:\\Users\\Aum\\Downloads\\Projecthub\\Projecthub\\static\\js\\data.json', 'w') as file:
                 json.dump(existing_data, file, indent=2)
         except json.JSONDecodeError:
             return JsonResponse({'message': 'Invalid JSON data'}, status=400)
     else:
         return JsonResponse({'message': 'Invalid request method'}, status=405)
 
-
+#C:\\Users\\Aum\\Downloads\\Projecthub\\Projecthub\\static\\js\\user.json
 def save_account_data(request):
     if request.method == 'POST':
         try:
             data = json.loads(request.body.decode('utf-8'))
             # You can now process and save 'data' to a JSON file
-            with open('D:/SIH/static/js/user.json', 'r') as file:
+            with open('C:\\Users\\Aum\\Downloads\\Projecthub\\Projecthub\\static\\js\\user.json', 'r') as file:
                 existing_data = json.load(file)
 
             # Append the new data to the existing data
             existing_data.append(data)
 
             # Write the updated data back to the file with a comma and newline
-            with open('D:/SIH/static/js/user.json', 'w') as file:
+            with open('C:\\Users\\Aum\\Downloads\\Projecthub\\Projecthub\\static\\js\\user.json', 'w') as file:
                 json.dump(existing_data, file, indent=2)
         except json.JSONDecodeError:
             return JsonResponse({'message': 'Invalid JSON data'}, status=400)
     else:
         return JsonResponse({'message': 'Invalid request method'}, status=405)
-# def save_account_data(request):
-#     if request.method == 'POST':
-#         try:
-#             data = json.loads(request.body.decode('utf-8'))
-#             # You can now process and save 'data' to a JSON file
-#             with open('D:\smartindiahackathon\static\js\user.json', 'w') as file:
-#                 json.dump(data, file)
-#             return JsonResponse({'message': 'Data saved successfully'})
-#         except json.JSONDecodeError:
-#             return JsonResponse({'message': 'Invalid JSON data'}, status=400)
-#     else:
-#         return JsonResponse({'message': 'Invalid request method'}, status=405)
