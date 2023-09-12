@@ -1,7 +1,6 @@
 import json
 from django.http import JsonResponse
 from django.http import HttpResponse
-import os
 from django.shortcuts import render
 
 from pathlib import Path
@@ -28,6 +27,9 @@ def addprojects(request):
 
 def account(request):
     return render(request, "account.html")
+
+def login(request):
+    return render(request, "login.html")
 
 #C:\\Users\\Aum\\Downloads\\Projecthub\\Projecthub\\static\\js\\data.json
 def save_form_data(request):

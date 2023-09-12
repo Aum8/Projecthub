@@ -22,6 +22,7 @@ urlpatterns = [
     path('about-us/', views.aboutUs),
     path('', views.home),
     path('home/', views.home),
+    path('login/', views.login),
     path('add-projects/', views.addprojects),
     path('project/', views.project),
     path('account/', views.account),
@@ -31,8 +32,5 @@ urlpatterns = [
 
     path('save_account_data/', views.save_account_data,
          name='save_account_data'),    # Other URL patterns
-
-
-
 
 ]
