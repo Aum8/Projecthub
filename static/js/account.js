@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const loginForm = document.getElementById("login-form");
     const signupForm = document.getElementById("signup-form");
-    const forgotPasswordForm = document.getElementById("forgot-password-form");
 
     const showForm = (form) => {
         loginForm.classList.add("hidden");
@@ -25,12 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     //     showForm(forgotPasswordForm);
     // });
 
-    // Simulated form submissions (no actual backend logic)
-    loginForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        // Simulated login logic
-        alert("Simulated login submitted");
-    });
 
     signupForm.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -39,11 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
         // Get form data
         const username = document.getElementById("signup-username").value;
         const email = document.getElementById("signup-email").value;
+        const password = document.getElementById("Password").value;
 
         // Create an object to represent the form data
         const formData = {
             username: username,
-            email: email
+            email: email,
+            password: password
         };
 
         // Send the form data to the server for saving

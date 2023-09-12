@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const showForm = (form) => {
         loginForm.classList.add("hidden");
-        signupForm.classList.add("hidden");
         forgotPasswordForm.classList.add("hidden");
         form.classList.remove("hidden");
     };
@@ -23,14 +22,28 @@ document.addEventListener("DOMContentLoaded", function () {
     loginForm.addEventListener("submit", function (e) {
         e.preventDefault();
         // Simulated login logic
-        alert("Simulated login submitted");
-    });
+        const username = document.getElementById("login-username").value;
+        const password = document.getElementById("login-password").value;
 
+        // Assuming data.json contains an array of user objects with username and password fields
+        fetch("/static/js/data.json") // Adjust the path as needed
+            .then((response) => response.json())
+            .then((data) => {
+                const user = data.find((user) => user.username === username && user.password === password);
+                if (user) {
+                    alert("Login successful");
+                } else {
+                    alert("Invalid username or password");
+                }
+            })
+            .catch((error) => {
+                console.error("Error fetching data:", error);
+            });
+    });
 
     forgotPasswordForm.addEventListener("submit", function (e) {
         e.preventDefault();
         // Simulated forgot password logic
-        alert("Simulated forgot password submitted");
+        alert("Email sent for reset password");
     });
-
 });
