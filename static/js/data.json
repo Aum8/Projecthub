@@ -1,14 +1,119 @@
-{
-    "projectName": "Malkhana Management System",
-    "projectDescription": "inventory system",
-    "projectTechStack": "angular,html,css,Java,Hibernate",
-    "userName": "Aum Hadiyal",
-    "userEmail": "aghadiyal@yahoo.com",
+[
+  {
+    "projectName": "House price prediction",
+    "projectDescription": "sfv",
+    "projectTechStack": "Python, Pandas, Numpy, Matplotlib",
+    "userName": "Aum",
+    "userEmail": "aum832003@gmail.com",
     "collegeName": "Parul University",
     "state": "Gujarat",
     "city": "Vadodara",
     "imgurLinks": [
-        "https://i.imgur.com/53yJOPt.jpg",
-        "https://i.imgur.com/HH9H7cr.jpg"
+      "https://i.imgur.com/2CrCYBu.png"
     ]
-}
+  },
+  {
+    "projectName": "q",
+    "projectDescription": "q",
+    "projectTechStack": "q",
+    "userName": "q",
+    "userEmail": "q",
+    "collegeName": "q",
+    "state": "q",
+    "city": "q",
+    "imgurLinks": [
+      "https://i.imgur.com/WSOEi2T.png"
+    ]
+  },
+  {
+    "projectName": "q",
+    "projectDescription": "q",
+    "projectTechStack": "q",
+    "userName": "q",
+    "userEmail": "q",
+    "collegeName": "q",
+    "state": "q",
+    "city": "qq",
+    "imgurLinks": [
+      "https://i.imgur.com/QdLLpYK.png"
+    ]
+  },
+  {
+    "projectName": "q",
+    "projectDescription": "q",
+    "projectTechStack": "q",
+    "userName": "q",
+    "userEmail": "q",
+    "collegeName": "q",
+    "state": "q",
+    "city": "qq",
+    "imgurLinks": [
+      "https://i.imgur.com/QdLLpYK.png"
+    ]
+  },
+  {
+    "projectName": "q",
+    "projectDescription": "q",
+    "projectTechStack": "q",
+    "userName": "q",
+    "userEmail": "q",
+    "collegeName": "q",
+    "state": "q",
+    "city": "qq",
+    "imgurLinks": [
+      "https://i.imgur.com/QdLLpYK.png"
+    ]
+  },
+  {
+    "projectName": "q",
+    "projectDescription": "q",
+    "projectTechStack": "q",
+    "userName": "q",
+    "userEmail": "q",
+    "collegeName": "q",
+    "state": "q",
+    "city": "f",
+    "imgurLinks": [
+      "https://i.imgur.com/dhgSZSH.png"
+    ]
+  },
+  {
+    "projectName": "w",
+    "projectDescription": "w",
+    "projectTechStack": "w",
+    "userName": "w",
+    "userEmail": "w",
+    "collegeName": "w",
+    "state": "w",
+    "city": "ww",
+    "imgurLinks": [
+      "https://i.imgur.com/YBVoLNo.png"
+    ]
+  },
+  {
+    "projectName": "e",
+    "projectDescription": "e",
+    "projectTechStack": "e",
+    "userName": "e",
+    "userEmail": "e",
+    "collegeName": "e",
+    "state": "e",
+    "city": "e",
+    "imgurLinks": [
+      "https://i.imgur.com/7xA56ZR.png"
+    ]
+  },
+  {
+    "projectName": "e",
+    "projectDescription": "e",
+    "projectTechStack": "e",
+    "userName": "e",
+    "userEmail": "e@q",
+    "collegeName": "e",
+    "state": "e",
+    "city": "e",
+    "imgurLinks": [
+      "https://i.imgur.com/7xA56ZR.png"
+    ]
+  }
+]

@@ -29,8 +29,8 @@ urlpatterns = [
     path('save_form_data/', views.save_form_data,
          name='save_form_data'),    # Other URL patterns
 
-    path('save_account_data/', views.save_account_data,
-         name='save_account_data'),    # Other URL patterns
+    # path('save_account_data/', views.save_account_data,
+    #      name='save_account_data'),    # Other URL patterns
 
 
 
