@@ -8,16 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
         form.classList.remove("hidden");
     };
 
-    document.getElementById("show-login").addEventListener("click", function (e) {
-        e.preventDefault();
-        showForm(loginForm);
-    });
-
-    document.getElementById("show-forgot-password").addEventListener("click", function (e) {
-        e.preventDefault();
-        showForm(forgotPasswordForm);
-    });
-
     // Simulated form submissions (no actual backend logic)
     loginForm.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -26,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = document.getElementById("login-password").value;
 
         // Assuming data.json contains an array of user objects with username and password fields
-        fetch("/static/js/data.json") // Adjust the path as needed
+        fetch("/static/js/user.json") // Adjust the path as needed
             .then((response) => response.json())
             .then((data) => {
                 const user = data.find((user) => user.username === username && user.password === password);
