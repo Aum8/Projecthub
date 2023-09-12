@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }),
         })
             .then((response) => {
-                    console.log("Form data saved successfully on the server.");
-                    alert('Form data saved successfully.');
+                console.log("Form data saved successfully on the server.");
+                alert('Form data saved successfully.');
             })
             .catch((error) => {
                 console.error("Error while sending form data:", error);

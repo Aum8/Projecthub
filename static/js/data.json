@@ -115,5 +115,53 @@
     "imgurLinks": [
       "https://i.imgur.com/7xA56ZR.png"
     ]
+  },
+  {
+    "projectName": "Malkhana Management System",
+    "projectDescription": "inventory system",
+    "projectTechStack": "angular,html,css,Java,Hibernate",
+    "userName": "Aum Hadiyal",
+    "userEmail": "aghadiyal@yahoo.com",
+    "collegeName": "Parul University",
+    "state": "Gujarat",
+    "city": "Vadodara",
+    "imgurLinks": [
+      "https://i.imgur.com/kfdLSD0.png"
+    ]
+  },
+  {
+    "projectName": "Malkhana Management System",
+    "projectDescription": "inventory system",
+    "projectTechStack": "angular,html,css,Java,Hibernate",
+    "userName": "Aum Hadiyal",
+    "userEmail": "aghadiyal@yahoo.com",
+    "collegeName": "Parul University",
+    "state": "Gujarat",
+    "city": "Vadodara",
+    "imgurLinks": []
+  },
+  {
+    "projectName": "Malkhana Management System",
+    "projectDescription": "inventory system",
+    "projectTechStack": "angular,html,css,Java,Hibernate",
+    "userName": "Aum Hadiyal",
+    "userEmail": "aghadiyal@yahoo.com",
+    "collegeName": "Parul University",
+    "state": "Gujarat",
+    "city": "Vadodara",
+    "imgurLinks": []
+  },
+  {
+    "projectName": "Malkhana Management System",
+    "projectDescription": "inventory system",
+    "projectTechStack": "angular,html,css,Java,Hibernate",
+    "userName": "Aum Hadiyal",
+    "userEmail": "aghadiyal@yahoo.com",
+    "collegeName": "Parul University",
+    "state": "Gujarat",
+    "city": "Vadodara",
+    "imgurLinks": [
+      "https://i.imgur.com/DoBarxv.png"
+    ]
   }
 ]

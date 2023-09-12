@@ -10,20 +10,20 @@ document.addEventListener("DOMContentLoaded", function () {
         form.classList.remove("hidden");
     };
 
-    document.getElementById("show-signup").addEventListener("click", function (e) {
-        e.preventDefault();
-        showForm(signupForm);
-    });
+    // document.getElementById("show-signup").addEventListener("click", function (e) {
+    //     e.preventDefault();
+    //     showForm(signupForm);
+    // });
 
-    document.getElementById("show-login").addEventListener("click", function (e) {
-        e.preventDefault();
-        showForm(loginForm);
-    });
+    // document.getElementById("show-login").addEventListener("click", function (e) {
+    //     e.preventDefault();
+    //     showForm(loginForm);
+    // });
 
-    document.getElementById("show-forgot-password").addEventListener("click", function (e) {
-        e.preventDefault();
-        showForm(forgotPasswordForm);
-    });
+    // document.getElementById("show-forgot-password").addEventListener("click", function (e) {
+    //     e.preventDefault();
+    //     showForm(forgotPasswordForm);
+    // });
 
     // Simulated form submissions (no actual backend logic)
     loginForm.addEventListener("submit", function (e) {
@@ -50,30 +50,31 @@ document.addEventListener("DOMContentLoaded", function () {
         saveFormData(formData);
     });
 
-    forgotPasswordForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        // Simulated forgot password logic
-        alert("Simulated forgot password submitted");
-    });
+    // forgotPasswordForm.addEventListener("submit", function (e) {
+    //     e.preventDefault();
+    //     // Simulated forgot password logic
+    //     alert("Simulated forgot password submitted");
+    // });
 
     // Function to send form data to the server for saving
     function saveFormData(formData) {
+        const csrfToken = document.querySelector('#signup-form [name=csrfmiddlewaretoken]').value;
         // Make an AJAX (Fetch API) POST request to your server
         fetch("/save_account_data/", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "X-CSRFToken": csrfToken,
             },
             body: JSON.stringify(formData)
         })
-        .then(response => response.json())
-        .then(data => {
-            // Handle the response from the server, if needed
-            console.log(data);
-            alert("Form data saved on the server.");
-        })
-        .catch(error => {
-            console.error("Error saving form data:", error);
-        });
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response from the server, if needed
+                console.log(data);
+                alert("Form data saved on the server.");
+            })
+            .catch(error => {
+            });
     }
 });
