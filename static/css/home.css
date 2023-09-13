@@ -7,7 +7,7 @@ ul {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    /* background-color: #0078d4; */
     color: #333;
 }
 
@@ -24,7 +24,7 @@ header {
 header img {
     border-radius: 10px 10px;
     width: 20%;
-    border: 2px solid orange;
+    border: 2px solid #0078d4;
     float: left;
     margin-left: 150px;
     margin-right: 80px
@@ -49,13 +49,15 @@ header img {
 .search-container button[type="submit"] {
     padding: 10px 20px;
     margin-top: 20px;
-    background-color: orange;
-    color: black;
+    background-color: rgba(36, 124, 146, 0.533);
+    color: white;
     border: none;
     border-radius: 1px;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 23px;
 }
+
 
 /* Styling for the account icon */
 .account-icon {
@@ -94,8 +96,11 @@ h1 {
 
 
 .menu-bar {
-    background-color: orange;
+    background-color: rgba(36, 124, 146, 0.533);
+    border-radius: 15px;
     overflow: hidden;
+    border: 2px solid black;
+    margin-top: 5px;
 }
 
 .menu-bar a {
@@ -108,9 +113,11 @@ h1 {
 }
 
 .menu-bar a:hover {
-    background-color: black;
-    color: orange;
-    border: 3px solid black;
+    background-color: rgba(36, 124, 146, 0.533);
+    color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: auto;
 }
 
 .container {
@@ -123,7 +130,7 @@ h1 {
 }
 
 .welcome {
-    background-color: #FFA500;
+    background-color: rgba(36, 124, 146, 0.533);
     color: black;
     text-align: center;
     justify-content: center;
@@ -133,7 +140,7 @@ h1 {
     padding: 10px;
     border: 3px solid black;
     width: 50%;
-    border-radius: 10px 10px;
+    border-radius: 10px 20px;
 }
 
 .welcome h1 {
@@ -147,7 +154,6 @@ h1 {
     align-items: center;
     margin: 7%;
     text-align: center;
-    background-color: #F0F0F0;
 }
 
 #description {
