@@ -7,7 +7,7 @@ ul {
 
 body {
     font-family: Arial, sans-serif;
-    /* background-color: #0078d4; */
+     background-color: #ffffff;
     color: #333;
 }
 
@@ -40,8 +40,8 @@ header img {
     margin-right: 10px;
     padding: 10px;
     width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 1px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
     font-size: 16px;
 }
 
@@ -51,11 +51,11 @@ header img {
     margin-top: 20px;
     background-color: rgba(36, 124, 146, 0.533);
     color: white;
-    border: none;
+    border: 2px solid white;
     border-radius: 1px;
     cursor: pointer;
     font-size: 16px;
-    border-radius: 23px;
+    border-radius: 15px;
 }
 
 
@@ -97,10 +97,9 @@ h1 {
 
 .menu-bar {
     background-color: rgba(36, 124, 146, 0.533);
-    border-radius: 15px;
     overflow: hidden;
     border: 2px solid black;
-    margin-top: 5px;
+    margin-top: 0px;
 }
 
 .menu-bar a {
@@ -140,7 +139,7 @@ h1 {
     padding: 10px;
     border: 3px solid black;
     width: 50%;
-    border-radius: 10px 20px;
+    border-radius: 10px ;
 }
 
 .welcome h1 {

@@ -1,7 +1,7 @@
 body {
     height: 100vh;
     /* 100% of the viewport height */
-    background: linear-gradient(to right, orange 50%, black 50%);
+    background: rgba(36, 124, 146, 0.533);
 }
 
 .container {
@@ -18,8 +18,9 @@ body {
 
 h1 {
     text-align: center;
-    background-color: orange;
-    width: 62%;
+    background-color: rgba(0, 10, 12, 0.851);
+    color: aliceblue;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
@@ -41,13 +42,13 @@ select {
     width: 95%;
     padding: 10px;
     margin-bottom: 15px;
-
     border: 1px solid #ccc;
     border-radius: 3px;
 }
 
+
 button[type="submit"] {
-    background-color: #007bff;
+    background-color: rgba(0, 10, 12, 0.851);
     color: #fff;
     padding: 10px 20px;
     border: none;
