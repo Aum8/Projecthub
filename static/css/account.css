@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:lightblue
+    background: linear-gradient(to right, #001f3f 20%, #a0d6b4 50%);
 }
 
 .container {
@@ -10,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #a0d6b4;
 }
 
 .form-container {

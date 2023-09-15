@@ -1,14 +1,14 @@
 body {
     height: 100vh;
     /* 100% of the viewport height */
-    background: rgba(36, 124, 146, 0.533);
+    background:  #a0d6b4 ;
 }
 
 .container {
     max-width: 650px;
     margin: 0 auto;
     padding: 20px;
-    border: 2px solid black;
+    border: 2px solid #001f3f;
     border-radius: 5px;
     background-color: white;
 
@@ -18,12 +18,13 @@ body {
 
 h1 {
     text-align: center;
-    background-color: rgba(0, 10, 12, 0.851);
-    color: aliceblue;
+    background-color: #a0d6b4;
+    color: black;
     width: 40%;
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
+    border-radius: 15px;
 }
 
 form {
