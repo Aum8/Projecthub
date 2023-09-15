@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const csrfToken = document.querySelector('#projectForm [name=csrfmiddlewaretoken]').value;
 
 
-        // Your JavaScript code to send the POST request
+        // Example of more explicit error handling
         fetch("/save_form_data/", {
             method: "POST",
             headers: {
