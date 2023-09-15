@@ -85,24 +85,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 "X-CSRFToken": csrfToken,
             },
             body: JSON.stringify({
-                // ...
+                projectName: projectName,
+                projectDescription: projectDescription,
+                projectTechStack: projectTechStack,
+                userName: userName,
+                userEmail: userEmail,
+                collegeName: collegeName,
+                state: state,
+                city: city,
+                imgurLinks: imgurLinks
             }),
         })
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then((data) => {
-            console.log("Form data saved successfully on the server.");
-            alert('Form data saved successfully.');
-        })
-        .catch((error) => {
-            console.error("Error while sending form data:", error);
-            alert('Error while sending form data.');
-        });
-
+            .then((response) => {
+                console.log("Form data saved successfully on the server.");
+                alert('Form data saved successfully.');
+            })
+            .catch((error) => {
+                console.error("Error while sending form data:", error);
+                alert('Error while sending form data.');
+            });
     }
     // Add a click event listener to the "Submit Project" button
     const submitButton = document.querySelector("button[type='submit']");

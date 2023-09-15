@@ -9,16 +9,22 @@ from sklearn.metrics.pairwise import cosine_similarity
 stop_words = set(stopwords.words("english"))
 
 # Function to preprocess and tokenize text
+
+
 def preprocess_and_tokenize(text):
     words = word_tokenize(text)
-    words = [word.lower() for word in words if word.isalnum() and word not in stop_words]
+    words = [word.lower() for word in words if word.isalnum()
+             and word not in stop_words]
     return " ".join(words)
 
+
 def check_for_plagiarism(new_project_description, existing_project_descriptions):
-    preprocessed_existing_projects = [preprocess_and_tokenize(desc) for desc in existing_project_descriptions]
+    preprocessed_existing_projects = [preprocess_and_tokenize(
+        desc) for desc in existing_project_descriptions]
     preprocessed_new_project = preprocess_and_tokenize(new_project_description)
 
-    all_descriptions = preprocessed_existing_projects + [preprocessed_new_project]
+    all_descriptions = preprocessed_existing_projects + \
+        [preprocessed_new_project]
 
     vectorizer = TfidfVectorizer()
     tfidf_matrix = vectorizer.fit_transform(all_descriptions)
@@ -30,8 +36,9 @@ def check_for_plagiarism(new_project_description, existing_project_descriptions)
     threshold = 0.2
 
     # Check for potential plagiarism
-    plagiarized_indices = [i for i, sim in enumerate(similarities[0]) if sim >= threshold]
-    
+    plagiarized_indices = [i for i, sim in enumerate(
+        similarities[0]) if sim >= threshold]
+
     return plagiarized_indices
 
 # Example usage of the function:
